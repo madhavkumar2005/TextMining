@@ -99,7 +99,7 @@ findFeatures <- function(text, target, nfolds= 4, ntry= 2,
     words.fold <- lapply(1:nfolds, function(j){
       crps <- prepareCorpus(x= text[folds == j], vec.source= vec.source)
       tdm <- createTDM(crps, ngram.min= ngram.min, ngram.max= ngram.max, min.rows.pop= min.rows.pop, 
-                       weight= weight, out.sparse= TRUE)
+                       weight= weight, out.sparse= out.sparse)
       enet.1 <- cv.glmnet(tdm, target[folds == j], family= family, alpha= alpha, nfolds= 3)
       vars <- enet.1$glmnet.fit$beta[, which(enet.1$lambda == enet.1$lambda.min)]
       vars <- vars[which(vars != 0)]
