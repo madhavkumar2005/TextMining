@@ -8,8 +8,6 @@
 # predictive modeling, and feature selection has been wrapped into one 
 # function
 #
-# Author(s): Madhav Kumar
-# Contact: madhavkumar2005@gmail.com
 # Date: 2014-09-16 (first); 2014-09-16 (current) 
 # Dependencies: tm, rJava, Snowball, RWeka, parallel
 # Tested on: R 3.0.2, OSX 10.9.4
