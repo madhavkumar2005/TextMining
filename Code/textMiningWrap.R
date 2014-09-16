@@ -27,6 +27,7 @@ target <- ifelse(target == "ham", 0, 1)
 table(target)
 train <- do.call("c", lapply(1:length(train), function(x) train[[x]][2]))
 train <- data.frame(target, text= train, stringsAsFactors= FALSE)
+write.table(train, file= "Data/SMSSpamCollection.txt", sep= "\t", row.names= FALSE)
 
 
 # =========================
